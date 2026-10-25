@@ -1,0 +1,10 @@
+node_modules
+dist
+*.local
+.DS_Store
+coverage
+.remember
+*.tsbuildinfo
+.claude/
+# Avert, the dropped first idea, stays out of the public repository.
+archive/

@@ -1,0 +1,132 @@
+/*
+ * Nizhal design tokens.
+ * Principle: the interface is the shade; heat appears only as data.
+ * Limewash and neem for the chrome, neel for "outside", IMD bands for risk.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --limewash: #eef1ec; /* page: lime wash with a touch of neel */
+  --plaster: #f8faf6; /* raised surfaces and chart plane */
+  --plaster-2: #e3e9e3; /* pressed / inset */
+  --line: #d3dbd4;
+  --line-strong: #b9c4bb;
+
+  /* Ink */
+  --ink: #18231e;
+  --ink-2: #46564e;
+  --ink-3: #6c7a72;
+
+  /* Brand */
+  --neem: #1e5b43;
+  --neem-deep: #123a2b;
+  --neem-wash: #dbe8df;
+  --on-neem: #ffffff;
+  --neel: #3550a0;
+  --danger: #a3302b;
+
+  /* Data series (validated: dataviz validator, light surface #F8FAF6) */
+  --series-outside: #2a78d6;
+  --series-inside: #eb6834;
+  --series-plan: #1baf7a; /* below 3:1 on light: always paired with the table view */
+  --series-outside-wash: rgba(42, 120, 214, 0.1);
+  --series-inside-wash: rgba(235, 104, 52, 0.1);
+  --comfort-wash: rgba(30, 91, 67, 0.09);
+  --grid: #e1e6e1;
+  --axis: #c3ccc5;
+
+  /* IMD heat index bands (status: always shown with a label) */
+  --band-green: #0ca30c;
+  --band-yellow: #fab219;
+  --band-orange: #ec835a;
+  --band-red: #d03b3b;
+  --band-ink-on-yellow: #3a2a00;
+
+  /* Type */
+  --font: 'Anek Latin', 'Anek Tamil', 'Anek Devanagari', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --size-12: 0.75rem;
+  --size-14: 0.875rem;
+  --size-16: 1rem;
+  --size-18: 1.125rem;
+  --size-21: 1.3125rem;
+  --size-24: 1.5rem;
+  --size-36: 2.25rem;
+  --size-48: 3rem;
+
+  /* Space (8-point, with a 4 for tight spots) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+
+  /* Shape: hierarchy, not one radius for everything */
+  --r-chip: 999px;
+  --r-control: 10px;
+  --r-panel: 18px;
+  --r-house: 28px;
+
+  --focus: 0 0 0 3px var(--limewash), 0 0 0 5px var(--neel);
+  --content: 1180px;
+  --tabbar: 68px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme='light'])) {
+    color-scheme: dark;
+    --limewash: #0f1915;
+    --plaster: #15211c;
+    --plaster-2: #1d2b25;
+    --line: #26362f;
+    --line-strong: #344a40;
+    --ink: #e7eee9;
+    --ink-2: #b6c4bb;
+    --ink-3: #8a9a91;
+    --neem: #6cc49b;
+    --neem-deep: #a6e2c4;
+    --neem-wash: #1d3a2e;
+    --on-neem: #0f1915;
+    --neel: #8fa6ec;
+    --danger: #f08a80;
+    --series-outside: #3987e5;
+    --series-inside: #d95926;
+    --series-plan: #199e70;
+    --series-outside-wash: rgba(57, 135, 229, 0.14);
+    --series-inside-wash: rgba(217, 89, 38, 0.14);
+    --comfort-wash: rgba(108, 196, 155, 0.1);
+    --grid: #22312a;
+    --axis: #344a40;
+    --focus: 0 0 0 3px var(--limewash), 0 0 0 5px var(--neel);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --limewash: #0f1915;
+  --plaster: #15211c;
+  --plaster-2: #1d2b25;
+  --line: #26362f;
+  --line-strong: #344a40;
+  --ink: #e7eee9;
+  --ink-2: #b6c4bb;
+  --ink-3: #8a9a91;
+  --neem: #6cc49b;
+  --neem-deep: #a6e2c4;
+  --neem-wash: #1d3a2e;
+  --on-neem: #0f1915;
+  --neel: #8fa6ec;
+  --danger: #f08a80;
+  --series-outside: #3987e5;
+  --series-inside: #d95926;
+  --series-plan: #199e70;
+  --series-outside-wash: rgba(57, 135, 229, 0.14);
+  --series-inside-wash: rgba(217, 89, 38, 0.14);
+  --comfort-wash: rgba(108, 196, 155, 0.1);
+  --grid: #22312a;
+  --axis: #344a40;
+}

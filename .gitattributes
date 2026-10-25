@@ -1,0 +1,5 @@
+# Same line endings on every machine (the build runs on Linux).
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
